@@ -40,7 +40,7 @@ export const updateStatement = async (req, res) => {
 export const findbyId = async (req, res) => {
     try {
         console.log("request", status)
-        const findbyId = await StatementModel.find()
+        const findbyId = await StatementModel.findByIdAndDelete(req.params.id) {}
         res.status(200).find(getData);
     } catch (error) {
         console.log (error)
